@@ -1,26 +1,4 @@
 import warning from 'warning';
-import nested from '../ThemeProvider/nested';
-
-/**
- * This is the list of the style rule name we use as drop in replacement for the built-in
- * pseudo classes (:checked, :disabled, :focused, etc.).
- *
- * Why do they exist in the first place?
- * These classes are used at a specificity of 2.
- * It allows them to override previously definied styles as well as
- * being untouched by simple user overrides.
- */
-const pseudoClasses = [
-  'checked',
-  'disabled',
-  'error',
-  'focused',
-  'focusVisible',
-  'required',
-  'expanded',
-  'selected',
-];
-
 // Returns a function which generates unique class names based on counters.
 // When new generator function is created, rule counter is reset.
 // We need to reset the rule counter for SSR for each request.
