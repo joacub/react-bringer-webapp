@@ -28,8 +28,8 @@
   "main": "bin/server.js",
   "scripts": {
     "start": "concurrently --kill-others \"npm run start-prod\" \"npm run start-prod-api\"",
-    "start-prod": "cross-env HOST=127.0.0.1 NODE_PATH=src NODE_ENV=production PORT=9777 APIPORT=4747 node --trace-deprecation ./bin/server.js",
-    "start-prod-api": "cross-env HOST=127.0.0.1 NODE_PATH=api NODE_ENV=production APIPORT=4747 node --trace-deprecation ./bin/api.js",
+    "start-prod": "cross-env HOST=127.0.0.1 NODE_PATH=src NODE_ENV=production PORT=9777 APIPORT=5757 node --trace-deprecation ./bin/server.js",
+    "start-prod-api": "cross-env HOST=127.0.0.1 NODE_PATH=api NODE_ENV=production APIPORT=5757 node --trace-deprecation ./bin/api.js",
     "dev": "concurrently --kill-others \"npm run watch-client\" \"npm run start-dev\" \"npm run start-dev-api\"",
     "start-dev": "cross-env HOST=127.0.0.1 TZ=UTC NODE_PATH=src NODE_ENV=development PORT=3000 APIPORT=3737 node --trace-deprecation ./bin/server.js",
     "start-dev-api": "cross-env HOST=127.0.0.1 TZ=UTC NODE_PATH=api NODE_ENV=development APIPORT=3737 node --trace-deprecation ./bin/api.js",

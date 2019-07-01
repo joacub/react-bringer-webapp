@@ -21,7 +21,7 @@ module.exports = {
         NODE_ENV: 'production',
         NODE_PATH: 'api',
         PORT: 9777,
-        APIPORT: 4747,
+        APIPORT: 5757,
         HOST: '127.0.0.1',
       },
       env_dev: {
@@ -45,7 +45,7 @@ module.exports = {
         NODE_ENV: 'production',
         NODE_PATH: 'src',
         PORT: 9777,
-        APIPORT: 4747,
+        APIPORT: 5757,
         HOST: '127.0.0.1',
       },
       env_dev: {
