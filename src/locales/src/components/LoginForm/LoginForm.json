@@ -1,0 +1,14 @@
+[
+  {
+    "id": "email",
+    "defaultMessage": "Email"
+  },
+  {
+    "id": "password",
+    "defaultMessage": "Password"
+  },
+  {
+    "id": "login",
+    "defaultMessage": "Login"
+  }
+]

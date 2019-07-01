@@ -1,0 +1,22 @@
+[
+  {
+    "id": "recoveryPassword",
+    "defaultMessage": "Recovery password"
+  },
+  {
+    "id": "login",
+    "defaultMessage": "Login"
+  },
+  {
+    "id": "loginWith",
+    "defaultMessage": "Login with {value}"
+  },
+  {
+    "id": "createAccount",
+    "defaultMessage": "Create account"
+  },
+  {
+    "id": "signOut",
+    "defaultMessage": "Sign out"
+  }
+]

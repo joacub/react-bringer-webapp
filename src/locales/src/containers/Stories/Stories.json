@@ -1,0 +1,14 @@
+[
+  {
+    "id": "shareOn",
+    "defaultMessage": "Share on {socialMedia}"
+  },
+  {
+    "id": "readingTime",
+    "defaultMessage": "{readingTime} min read"
+  },
+  {
+    "id": "articleAvailableInOtherLang",
+    "defaultMessage": "This post is also available in {language}"
+  }
+]

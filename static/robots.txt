@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: /me/
+Disallow: /@me$
+Disallow: /@me/
+Disallow: /*/edit$
+Disallow: /*/*/edit$
+Sitemap: https://bringeraircargo.com/sitemap/sitemap.xml

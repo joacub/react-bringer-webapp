@@ -1,0 +1,58 @@
+[
+  {
+    "id": "sign_in",
+    "defaultMessage": "Sign in"
+  },
+  {
+    "id": "newStory",
+    "defaultMessage": "New story"
+  },
+  {
+    "id": "stories",
+    "defaultMessage": "Stories"
+  },
+  {
+    "id": "stats",
+    "defaultMessage": "Stats"
+  },
+  {
+    "id": "letters",
+    "defaultMessage": "Letters"
+  },
+  {
+    "id": "followers",
+    "defaultMessage": "Followers"
+  },
+  {
+    "id": "navigation",
+    "defaultMessage": "Navigation"
+  },
+  {
+    "id": "featuredPages",
+    "defaultMessage": "Featured pages"
+  },
+  {
+    "id": "homepageAndSettings",
+    "defaultMessage": "Homepage and settings"
+  },
+  {
+    "id": "editStory",
+    "defaultMessage": "Edit story"
+  },
+  {
+    "id": "publications",
+    "defaultMessage": "Publications"
+  },
+  {
+    "id": "profile",
+    "defaultMessage": "Profile"
+  },
+  {
+    "id": "settings",
+    "defaultMessage": "Settings"
+  },
+  {
+    "id": "signOut",
+    "defaultMessage": "Sign out"
+  }
+]

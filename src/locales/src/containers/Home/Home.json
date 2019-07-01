@@ -1,0 +1,18 @@
+[
+  {
+    "id": "privacy",
+    "defaultMessage": "Privacy"
+  },
+  {
+    "id": "terms",
+    "defaultMessage": "Terms"
+  },
+  {
+    "id": "about",
+    "defaultMessage": "About"
+  },
+  {
+    "id": "see_all_featured",
+    "defaultMessage": "SEE ALL FEATURED"
+  }
+]

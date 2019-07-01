@@ -1,0 +1,10 @@
+[
+  {
+    "id": "relatedTags",
+    "defaultMessage": "Related tags"
+  },
+  {
+    "id": "taggedIn",
+    "defaultMessage": "Tagged in"
+  }
+]

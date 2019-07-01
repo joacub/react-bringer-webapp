@@ -1,0 +1,10 @@
+[
+  {
+    "id": "following",
+    "defaultMessage": "Following"
+  },
+  {
+    "id": "follow",
+    "defaultMessage": "Follow"
+  }
+]
