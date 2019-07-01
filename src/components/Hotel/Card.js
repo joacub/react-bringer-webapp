@@ -265,8 +265,6 @@ const HotelCard = React.memo(({
     });
   }
 
-  const defaultRoom = hotel.rooms ? hotel.rooms.filter(r => r.status === 'Available').shift() : {};
-
   return (
     <div className={clsx(classes.container, { [classes.active]: openDetails || active })}>
       <Grid container spacing={2}>
@@ -320,18 +318,14 @@ View Rooms / Availability
               <Grid item xs={4}>
                 <div className={classes.orangeBar} />
                 <div className={classes.priceBox}>
-                  {!defaultRoom ? 'Sold Out' : (
-                    <>
 Starting at
-                      {' '}
-                      <br />
+                  {' '}
+                  <br />
                   USD
-                      {' '}
-                      <span className={classes.price}>{defaultRoom.price}</span>
-                      <br />
+                  {' '}
+                  <span className={classes.price}>{hotel.price}</span>
+                  <br />
                   per room / night
-                    </>
-                  )}
                 </div>
                 <Typography
                   className={classes.taxesText}
