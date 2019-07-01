@@ -13,9 +13,9 @@ const customizeQuery = async hook => {
   const attributes = {
     exclude: [],
     include: [
-      [Sequelize.literal('(SELECT filename FROM uploads up WHERE up.model = "Hotels" AND up.type = "photo" AND up.foreign_key = hotels.id)'), 'image'],
-      [Sequelize.literal('(SELECT price FROM hotel_rooms hr WHERE hr.hotel_id = hotels.id AND hr.status = "Available" ORDER BY hr.price ASC LIMIT 1)'), 'price'],
-      [Sequelize.literal('(SELECT CONCAT(lat, "|", lon) FROM hotel_geo_locations geo WHERE geo.hotel_id = hotels.id LIMIT 1)'), 'geo']
+      [Sequelize.literal('(SELECT filename FROM uploads up WHERE up.model = "Hotels" AND up.type = "photo" AND up.foreign_key = Hotels.id)'), 'image'],
+      [Sequelize.literal('(SELECT price FROM hotel_rooms hr WHERE hr.hotel_id = Hotels.id AND hr.status = "Available" ORDER BY hr.price ASC LIMIT 1)'), 'price'],
+      [Sequelize.literal('(SELECT CONCAT(lat, "|", lon) FROM hotel_geo_locations geo WHERE geo.hotel_id = Hotels.id LIMIT 1)'), 'geo']
     ]
   };
 

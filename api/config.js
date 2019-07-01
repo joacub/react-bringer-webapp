@@ -52,7 +52,7 @@ const config = {
   mysqldev: {
     user: configLocal.mysqldev.user,
     database: configLocal.mysqldev.database,
-    password: configLocal.mysql.password,
+    password: configLocal.mysqldev.password,
     options: {
       logging: e => {
         console.log('<<<<<<<<<-----------------LOG SEQUELIZE----------------->>>>>>>>>>>');
