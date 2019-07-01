@@ -134,6 +134,8 @@ export default class Home extends Component {
     classes: PropTypes.objectOf(PropTypes.any).isRequired,
   };
 
+  markers = {};
+
   state = {
     values: {},
     open: false,
@@ -260,6 +262,11 @@ export default class Home extends Component {
 
     const currentHotels = hotels[key];
 
+    Object.keys(this.markers).forEach(k => {
+      this.map.removeLayer(this.markers[k]);
+      delete this.markers[k];
+    });
+
     if (currentHotels && currentHotels[0]) {
       const [_lat, _lon] = currentHotels[0].geo.split('|');
 
@@ -273,7 +280,8 @@ export default class Home extends Component {
 
       currentHotels.forEach(h => {
         const [lat, lon] = h.geo.split('|');
-        this.L.marker([lat, lon]).addTo(this.map)
+        this.markers[h.id] = this.L.marker([lat, lon]);
+        this.markers[h.id].addTo(this.map)
           .bindPopup(h.name).on('popupopen', () => {
             that.setState({ activeH: h });
           })
