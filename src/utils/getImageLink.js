@@ -9,7 +9,7 @@ const getImageLink = (md5, version, format) => {
     return `${domainImages}/media/${version}/${md5}*${ext}.webp`;
   }
   return `${domainImages}/media/${version}/${md5}.${ext}`;
-  // return `https://bringeraircargo.com/media/${version}/${md5}.${ext}`;
+  // return `https://bringer-test.webmediaprojects.net/media/${version}/${md5}.${ext}`;
 };
 
 export default getImageLink;

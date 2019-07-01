@@ -381,7 +381,7 @@ module.exports = {
         appName: 'Bringer',
         appDescription: 'News, politics, stories, stay informed',
         developerName: 'Bringer',
-        developerURL: 'https://bringeraircargo.com', // prevent retrieving from the nearest package.json
+        developerURL: 'https://bringer-test.webmediaprojects.net', // prevent retrieving from the nearest package.json
         background: 'transparent',
         theme_color: '#fff'
       }

@@ -75,9 +75,9 @@ export default class FooterComponent extends Component {
           </Button>
         </Grid>
         <Grid item xs={12}>
-          <Link to="/" title="bringeraircargo.com">
+          <Link to="/" title="bringer-test.webmediaprojects.net">
             <LazyLoad offsetHorizontal={300}>
-              <img className={classes.imgResponsive} src={logo} alt="bringeraircargo.com" />
+              <img className={classes.imgResponsive} src={logo} alt="bringer-test.webmediaprojects.net" />
             </LazyLoad>
           </Link>
         </Grid>

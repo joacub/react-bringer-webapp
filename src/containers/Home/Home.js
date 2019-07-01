@@ -339,7 +339,7 @@ export default class Home extends Component {
       url: config.domain,
       name: config.app.title,
       alternateName: 'Bringer',
-      image: 'https://bringeraircargo.com/media/max_1600/1*NaXapbTluUAlP1Xmqib5mQ.png',
+      image: 'https://bringer-test.webmediaprojects.net/media/max_1600/1*NaXapbTluUAlP1Xmqib5mQ.png',
       sameAs: [
         'https://www.facebook.com/Bringer',
         'https://instagram.com/Bringer',
@@ -353,9 +353,9 @@ export default class Home extends Component {
       '@type': 'Organization',
       name: config.app.title,
       legalName: 'Bringer CORP',
-      email: 'mailto:contact@bringeraircargo.com',
+      email: 'mailto:contact@bringer-test.webmediaprojects.net',
       url: config.domain,
-      // logo: 'https://bringeraircargo.com/media/max_1600/1*NaXapbTluUAlP1Xmqib5mQ.png',
+      // logo: 'https://bringer-test.webmediaprojects.net/media/max_1600/1*NaXapbTluUAlP1Xmqib5mQ.png',
       sameAs: [
         'https://www.facebook.com/Bringer',
         'https://instagram.com/Bringer',
@@ -370,7 +370,7 @@ export default class Home extends Component {
       <React.Fragment>
         <Helmet>
           <title>{title}</title>
-          <link rel="canonical" href="https://bringeraircargo.com/" />
+          <link rel="canonical" href="https://bringer-test.webmediaprojects.net/" />
           <meta name="description" content={description} />
           <meta property="og:title" content={title} />
           <meta property="twitter:title" content={title} />

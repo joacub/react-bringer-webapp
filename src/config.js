@@ -9,9 +9,9 @@ const environment = {
   production: {
     isProduction: true,
     assetsPath: '/dist/',
-    domain: 'https://bringeraircargo.com',
-    domainIframe: 'https://iframe.bringeraircargo.com',
-    domainImages: 'https://bringeraircargo.com',
+    domain: 'https://bringer-test.webmediaprojects.net',
+    domainIframe: 'https://iframe.bringer-test.webmediaprojects.net',
+    domainImages: 'https://bringer-test.webmediaprojects.net',
   }
 }[process.env.NODE_ENV || 'development'];
 
@@ -27,7 +27,7 @@ const config = {
       titleTemplate: '%s',
       defaultTitle: 'Bringer',
       link: [
-        { type: 'text/plain', rel: 'author', href: 'https://bringeraircargo.com/humans.txt' },
+        { type: 'text/plain', rel: 'author', href: 'https://bringer-test.webmediaprojects.net/humans.txt' },
       ],
       meta: [
         { name: 'description', content: 'Bringer - Storeis And More.' },
@@ -37,8 +37,8 @@ const config = {
         { property: 'og:locale', content: 'en_US' },
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Bringer - Stories And More' },
-        { property: 'og:image', content: 'https://bringeraircargo.com/media/max_1200/1*NaXapbTluUAlP1Xmqib5mQ.png' },
-        // { property: 'twitter:image:src', content: 'https://bringeraircargo.com/media/max_1200/1*NaXapbTluUAlP1Xmqib5mQ.png' },
+        { property: 'og:image', content: 'https://bringer-test.webmediaprojects.net/media/max_1200/1*NaXapbTluUAlP1Xmqib5mQ.png' },
+        // { property: 'twitter:image:src', content: 'https://bringer-test.webmediaprojects.net/media/max_1200/1*NaXapbTluUAlP1Xmqib5mQ.png' },
         { property: 'og:locale', content: 'en_US' },
         { property: 'og:title', content: 'Bringer - Stories And More' },
         { property: 'og:description', content: 'Bringer - Stories And More.' },

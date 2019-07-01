@@ -13,16 +13,16 @@ const environment = {
   },
   production: {
     isProduction: true,
-    domain: 'https://bringeraircargo.com',
-    host: 'bringeraircargo.com',
+    domain: 'https://bringer-test.webmediaprojects.net',
+    host: 'bringer-test.webmediaprojects.net',
     port: 80
   }
 }[process.env.NODE_ENV || 'development'];
 const config = {
   ...environment,
   email: {
-    user: 'contact@bringeraircargo.com',
-    mail: 'no-reply@bringeraircargo.com',
+    user: 'contact@bringer-test.webmediaprojects.net',
+    mail: 'no-reply@bringer-test.webmediaprojects.net',
     password: configLocal.email.password
   },
   mysql: {
@@ -104,7 +104,7 @@ const config = {
     oauth: {
       redirect: '/login?connect=1',
       defaults: {
-        host: (process.env.NODE_ENV === 'production' ? 'bringeraircargo.com' : 'localhost:3000'),
+        host: (process.env.NODE_ENV === 'production' ? 'bringer-test.webmediaprojects.net' : 'localhost:3000'),
       },
       facebook: {
         permissions: {

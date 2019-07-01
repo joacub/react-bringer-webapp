@@ -77,8 +77,8 @@ export default class Html extends Component {
 
           {/* {!!originalUrl && originalUrl.indexOf('/me/') === -1 && ( */}
           {/* <> */}
-          {/* <link rel="preconnect" href="https://bringeraircargo.com" crossOrigin="true" /> */}
-          {/* <link rel="preconnect" href="https://cdn.bringeraircargo.com" crossOrigin /> */}
+          {/* <link rel="preconnect" href="https://bringer-test.webmediaprojects.net" crossOrigin="true" /> */}
+          {/* <link rel="preconnect" href="https://cdn.bringer-test.webmediaprojects.net" crossOrigin /> */}
           {/* <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="true" /> */}
 
           {/* <link rel="preconnect" href="https://www.googletagservices.com" crossOrigin="true" /> */}
@@ -428,7 +428,7 @@ export default class Html extends Component {
               <div className="pg-loading-inner">
                 <div className="pg-loading-center-outer">
                   <div className="pg-loading-center-middle">
-                    <h3 className="pg-loading-logo-header">bringeraircargo.com</h3>
+                    <h3 className="pg-loading-logo-header">bringer-test.webmediaprojects.net</h3>
                     <div className="pg-loading-html pg-loaded">
                       <p className="loading-message" />
                       <div className="sk-spinner sk-spinner-double-bounce">
@@ -447,12 +447,12 @@ export default class Html extends Component {
                 <div className="pg-loading-inner">
                   <div className="pg-loading-center-outer">
                     <div className="pg-loading-center-middle">
-                      <h3 className="pg-loading-logo-header">bringeraircargo.com</h3>
+                      <h3 className="pg-loading-logo-header">bringer-test.webmediaprojects.net</h3>
                       <div className="pg-loading-html pg-loaded">
                         <p className="loading-message">
                           <div className="NoScriptForm-content">
                             <p>
-                              We've detected that JavaScript is disabled in your browser. bringeraircargo.com need JavaScript
+                              We've detected that JavaScript is disabled in your browser. bringer-test.webmediaprojects.net need JavaScript
                               for work, please active and reload this page.
                             </p>
                           </div>

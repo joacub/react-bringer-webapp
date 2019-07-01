@@ -4,4 +4,4 @@ Disallow: /@me$
 Disallow: /@me/
 Disallow: /*/edit$
 Disallow: /*/*/edit$
-Sitemap: https://bringeraircargo.com/sitemap/sitemap.xml
+Sitemap: https://bringer-test.webmediaprojects.net/sitemap/sitemap.xml

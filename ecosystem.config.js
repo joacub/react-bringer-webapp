@@ -68,7 +68,7 @@ module.exports = {
       host: '167.114.100.28',
       ref: 'origin/master',
       repo: 'git@github.com:joacub/react-bringer-webapp.git',
-      path: '/var/www/bringeraircargo.com.production',
+      path: '/var/www/bringer-test.webmediaprojects.net.production',
       'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production'
     },
     dev: {
@@ -76,7 +76,7 @@ module.exports = {
       host: 'localhost',
       ref: 'origin/master',
       repo: 'git@github.com:joacub/react-bringer-webapp.git',
-      path: '/var/www/bringeraircargo.com.development',
+      path: '/var/www/bringer-test.webmediaprojects.net.development',
       'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env dev',
       // env: {
       //   NODE_ENV: 'dev'

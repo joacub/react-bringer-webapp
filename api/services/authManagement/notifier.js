@@ -5,11 +5,11 @@ import config from 'config';
 const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = app => {
-  const returnEmail = 'contact@bringeraircargo.com';
+  const returnEmail = 'contact@bringer-test.webmediaprojects.net';
 
   function getLink(type, hash) {
     const port = isProd ? '' : `:${3000}`;
-    const host = isProd ? 'bringeraircargo.com' : 'localhost';
+    const host = isProd ? 'bringer-test.webmediaprojects.net' : 'localhost';
     let protocol = isProd ? 'https' : 'http';
     protocol += '://';
     return `${protocol}${host}${port}/login/${type}/${hash}`;
@@ -43,7 +43,7 @@ module.exports = app => {
           templatePath = path.join(emailAccountTemplatesPath, 'verify-email.pug');
 
           compiledHTML = pug.compileFile(templatePath)({
-            logo: 'https://bringeraircargo.com/media/max_560/1*U-6cGMIUiYKWxAZAN6I7RA.png',
+            logo: 'https://bringer-test.webmediaprojects.net/media/max_560/1*U-6cGMIUiYKWxAZAN6I7RA.png',
             name: user.name || user.email,
             hashLink,
             returnEmail
@@ -63,7 +63,7 @@ module.exports = app => {
           templatePath = path.join(emailAccountTemplatesPath, 'email-verified.pug');
 
           compiledHTML = pug.compileFile(templatePath)({
-            logo: 'https://bringeraircargo.com/media/max_560/1*U-6cGMIUiYKWxAZAN6I7RA.png',
+            logo: 'https://bringer-test.webmediaprojects.net/media/max_560/1*U-6cGMIUiYKWxAZAN6I7RA.png',
             name: user.name || user.email,
             hashLink,
             returnEmail
@@ -83,7 +83,7 @@ module.exports = app => {
           templatePath = path.join(emailAccountTemplatesPath, 'reset-password.pug');
 
           compiledHTML = pug.compileFile(templatePath)({
-            logo: 'https://bringeraircargo.com/media/max_560/1*U-6cGMIUiYKWxAZAN6I7RA.png',
+            logo: 'https://bringer-test.webmediaprojects.net/media/max_560/1*U-6cGMIUiYKWxAZAN6I7RA.png',
             name: user.name || user.email,
             hashLink,
             returnEmail
@@ -103,7 +103,7 @@ module.exports = app => {
           templatePath = path.join(emailAccountTemplatesPath, 'password-was-reset.pug');
 
           compiledHTML = pug.compileFile(templatePath)({
-            logo: 'https://bringeraircargo.com/media/max_560/1*U-6cGMIUiYKWxAZAN6I7RA.png',
+            logo: 'https://bringer-test.webmediaprojects.net/media/max_560/1*U-6cGMIUiYKWxAZAN6I7RA.png',
             name: user.name || user.email,
             hashLink,
             returnEmail
@@ -121,7 +121,7 @@ module.exports = app => {
           templatePath = path.join(emailAccountTemplatesPath, 'password-change.pug');
 
           compiledHTML = pug.compileFile(templatePath)({
-            logo: 'https://bringeraircargo.com/media/max_560/1*U-6cGMIUiYKWxAZAN6I7RA.png',
+            logo: 'https://bringer-test.webmediaprojects.net/media/max_560/1*U-6cGMIUiYKWxAZAN6I7RA.png',
             name: user.name || user.email,
             returnEmail
           });
@@ -140,7 +140,7 @@ module.exports = app => {
           templatePath = path.join(emailAccountTemplatesPath, 'identity-change.pug');
 
           compiledHTML = pug.compileFile(templatePath)({
-            logo: 'https://bringeraircargo.com/media/max_560/1*U-6cGMIUiYKWxAZAN6I7RA.png',
+            logo: 'https://bringer-test.webmediaprojects.net/media/max_560/1*U-6cGMIUiYKWxAZAN6I7RA.png',
             name: user.name || user.email,
             hashLink,
             returnEmail,

@@ -100,7 +100,7 @@ app
         Standards: 'HTML5, CSS3',
         Softwares: 'Visual Studio code'
       },
-      note: 'Built with love by bringeraircargo.com.'
+      note: 'Built with love by bringer-test.webmediaprojects.net.'
     })
   )
   .use(favicon(path.join(__dirname, '..', 'static', 'favicon.ico')))
