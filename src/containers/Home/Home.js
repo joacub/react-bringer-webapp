@@ -119,6 +119,29 @@ const options = [
   },
 ];
 
+const getCurrentHotel = (props, state) => {
+  const { hotels } = props;
+  const { order, values } = state;
+  const paramsSearch = {
+    $skip: 0,
+    $limit: 20,
+    $paginate: false,
+    $sort: {
+      ...order
+    }
+  };
+
+  if (values.name) {
+    paramsSearch.name = {
+      $like: `%${values.name.split(' ').join('%')}%`
+    };
+  }
+
+  const key = JSON.stringify(paramsSearch);
+  const currentHotels = hotels[key];
+  return currentHotels;
+};
+
 @connect(
   state => ({
     loading: state.hotels && state.hotels.loading,
@@ -161,9 +184,18 @@ export default class Home extends Component {
     this.posHotels();
   }
 
-  shouldComponentUpdate(nextProps) {
+  shouldComponentUpdate(nextProps, nextState) {
     const { loading } = nextProps;
-    return !loading && !this.props.loading;
+    if (loading) {
+      return false;
+    }
+
+    const currentHotels = getCurrentHotel(nextProps, nextState);
+    if (!loading && currentHotels === undefined) {
+      return false;
+    }
+
+    return true;
   }
 
   handleChange = name => event => {
@@ -238,56 +270,50 @@ export default class Home extends Component {
   }
 
   posHotels() {
-    const { hotels } = this.props;
-    const { order, values } = this.state;
-
     const that = this;
+    const currentHotels = getCurrentHotel(this.props, this.state);
 
-    const paramsSearch = {
-      $skip: 0,
-      $limit: 20,
-      $paginate: false,
-      $sort: {
-        ...order
-      }
-    };
-
-    if (values.name) {
-      paramsSearch.name = {
-        $like: `%${values.name.split(' ').join('%')}%`
-      };
+    let newMarkers = false;
+    const hotelsById = {};
+    if (currentHotels) {
+      currentHotels.forEach(h => {
+        hotelsById[h.id] = true;
+        if (!this.markers[h.id]) {
+          newMarkers = true;
+        }
+      });
     }
 
-    const key = JSON.stringify(paramsSearch);
-
-    const currentHotels = hotels[key];
-
     Object.keys(this.markers).forEach(k => {
-      this.map.removeLayer(this.markers[k]);
-      delete this.markers[k];
+      if (!hotelsById[k]) {
+        this.map.removeLayer(this.markers[k]);
+        delete this.markers[k];
+      }
     });
 
-    if (currentHotels && currentHotels[0]) {
+    if (newMarkers && currentHotels && currentHotels[0]) {
       const [_lat, _lon] = currentHotels[0].geo.split('|');
 
       if (!this.map) {
         this.map = this.L.map('map').setView([_lat, _lon], 7);
-      }
-
-      this.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(this.map);
-
-      currentHotels.forEach(h => {
-        const [lat, lon] = h.geo.split('|');
-        this.markers[h.id] = this.L.marker([lat, lon]);
-        this.markers[h.id].addTo(this.map)
-          .bindPopup(h.name).on('popupopen', () => {
-            that.setState({ activeH: h });
-          })
+        this.map.on('popupopen', e => {
+          that.setState({ activeH: e.popup._source.options.h });
+        })
           .on('popupclose', () => {
             that.setState({ activeH: false });
           });
+        this.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(this.map);
+      }
+
+      currentHotels.forEach(h => {
+        const [lat, lon] = h.geo.split('|');
+        if(!this.markers[h.id]) {
+          this.markers[h.id] = this.L.marker([lat, lon], { h }).addTo(this.map)
+          .bindPopup(h.name);
+        }
+        
       });
     }
   }
@@ -338,24 +364,7 @@ export default class Home extends Component {
       ]
     };
 
-    const paramsSearch = {
-      $skip: 0,
-      $limit: 20,
-      $paginate: false,
-      $sort: {
-        ...order
-      }
-    };
-
-    if (values.name) {
-      paramsSearch.name = {
-        $like: `%${values.name.split(' ').join('%')}%`
-      };
-    }
-
-    const key = JSON.stringify(paramsSearch);
-
-    const currentHotels = hotels[key];
+    const currentHotels = getCurrentHotel(this.props, this.state);
 
     return (
       <React.Fragment>
@@ -456,13 +465,13 @@ Filters
           </Grid>
           <Grid container spacing={1}>
             <Grid item xs={12} sm={4}>
-              <div id="map" className={classes.containerMap} />
+              <div key="map" id="map" className={classes.containerMap} />
             </Grid>
             <Grid item xs={12} sm={8}>
               <Grid container spacing={2}>
                 {currentHotels && currentHotels.map(hotel => (
                   <Grid key={`hotel-${hotel.id}`} item xs={12}>
-                    <HotelCard key={`card-hotel-${hotel.id}`} active={activeH === hotel} onSelect={this.onSelect} submit={this.submit} hotel={hotel} />
+                    <HotelCard key={`card-hotel-${hotel.id}`} active={activeH && activeH.id === hotel.id} onSelect={this.onSelect} submit={this.submit} hotel={hotel} />
                   </Grid>
                 ))}
               </Grid>
