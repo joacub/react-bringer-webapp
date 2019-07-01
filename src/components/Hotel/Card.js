@@ -4,8 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import Rating from 'react-rating';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import NoSsr from '@material-ui/core/NoSsr';
+import Typography from '@material-ui/core/Typography';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -42,6 +42,7 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: 'cover',
     backgroundOrigin: 'border-box',
     backgroundPosition: '50% 50%',
+    backgroundImage: props => `url(${props.image})`
   },
   container: {
     border: '1px solid #dcdcdc',
@@ -225,7 +226,8 @@ const SVGIcon = props => (
 const HotelCard = React.memo(({
   hotel, submit, active, onSelect
 }) => {
-  const classes = useStyles();
+  const memoizedStyleProps = React.useMemo(() => ({ image: hotel.image }), [hotel.image]);
+  const classes = useStyles(memoizedStyleProps);
 
   const formEl = React.useRef(null);
   const [openDetails, setOpenDetails] = React.useState(false);
@@ -272,7 +274,6 @@ const HotelCard = React.memo(({
           <div className={classes.imageContainer}>
             <NoSsr>
               <div
-                style={{ backgroundImage: `url(${hotel.image})` }}
                 className={classes.image}
               />
             </NoSsr>

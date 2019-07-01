@@ -1115,13 +1115,6 @@ class HeaderApp extends Component {
                   </React.Fragment>
                 )}
               </Toolbar>
-              {isEditPostPage && (
-                <Hidden smUp>
-                  <Toolbar className={classes.toolbar}>
-                    <HeaderUser location={location} history={history} loading={loading} />
-                  </Toolbar>
-                </Hidden>
-              )}
             </Container>
           </AppBar>
         </RootRef>

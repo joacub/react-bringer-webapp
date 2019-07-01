@@ -309,11 +309,10 @@ export default class Home extends Component {
 
       currentHotels.forEach(h => {
         const [lat, lon] = h.geo.split('|');
-        if(!this.markers[h.id]) {
+        if (!this.markers[h.id]) {
           this.markers[h.id] = this.L.marker([lat, lon], { h }).addTo(this.map)
-          .bindPopup(h.name);
+            .bindPopup(h.name);
         }
-        
       });
     }
   }

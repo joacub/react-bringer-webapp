@@ -59,6 +59,11 @@ export default function createGenerateClassName(options = {}) {
       if (pseudoClasses.indexOf(rule.key) !== -1) {
         return rule.key;
       }
+
+      if (styleSheet.options.link) {
+        return `${seedPrefix}${productionPrefix}${ruleCounter}`;
+      }
+      
       const keyCounter = `${name}-${rule.key}`;
       const hash = hashCode(keyCounter);
       return `${productionPrefix}${seed}${hash}`;
