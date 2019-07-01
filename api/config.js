@@ -26,8 +26,8 @@ const config = {
     password: configLocal.email.password
   },
   mysql: {
-    user: 'root',
-    database: 'bringer',
+    user: configLocal.mysql.user,
+    database: configLocal.mysql.database,
     password: configLocal.mysql.password,
     options: {
       logging: false,
@@ -50,9 +50,9 @@ const config = {
     }
   },
   mysqldev: {
-    user: 'root',
-    database: 'bringer',
-    password: configLocal.mysqldev.password,
+    user: configLocal.mysqldev.user,
+    database: configLocal.mysqldev.database,
+    password: configLocal.mysql.password,
     options: {
       logging: e => {
         console.log('<<<<<<<<<-----------------LOG SEQUELIZE----------------->>>>>>>>>>>');
