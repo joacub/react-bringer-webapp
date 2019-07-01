@@ -42,7 +42,6 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: 'cover',
     backgroundOrigin: 'border-box',
     backgroundPosition: '50% 50%',
-    backgroundImage: props => `url(${props.image})`,
   },
   container: {
     border: '1px solid #dcdcdc',
@@ -226,7 +225,7 @@ const SVGIcon = props => (
 const HotelCard = React.memo(({
   hotel, submit, active, onSelect
 }) => {
-  const classes = useStyles({ image: hotel.image });
+  const classes = useStyles();
 
   const formEl = React.useRef(null);
   const [openDetails, setOpenDetails] = React.useState(false);
@@ -275,6 +274,7 @@ const HotelCard = React.memo(({
           <div className={classes.imageContainer}>
             <NoSsr>
               <div
+                style={{ backgroundImage: `url(${hotel.image})` }}
                 className={classes.image}
               />
             </NoSsr>
