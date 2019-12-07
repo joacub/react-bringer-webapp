@@ -271,7 +271,7 @@
     "sanitize-html": "^1.20.1",
     "sequelize": "^5.8.9",
     "sequelize-typescript": "v1.0.0-beta.3",
-    "serialize-javascript": "^1.7.0",
+    "serialize-javascript": "^2.1.1",
     "serve-favicon": "^2.5.0",
     "server-destroy": "^1.0.1",
     "shortid": "^2.2.14",
