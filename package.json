@@ -268,7 +268,7 @@
     "redux-persist-cookie-storage": "^1.0.0",
     "request": "^2.88.0",
     "rss": "^1.2.2",
-    "sanitize-html": "^1.20.1",
+    "sanitize-html": "^2.3.2",
     "sequelize": "^5.8.9",
     "sequelize-typescript": "v1.0.0-beta.3",
     "serialize-javascript": "^1.7.0",
