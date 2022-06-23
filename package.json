@@ -186,7 +186,7 @@
     "is-promise": "^2.1.0",
     "jimp": "^0.6.4",
     "js-cookie": "^2.2.0",
-    "jsdom": "^15.1.1",
+    "jsdom": "^16.5.0",
     "jss": "^10.0.0-alpha.17",
     "clean-css": "^4.2.1",
     "autoprefixer": "^9.6.0",
