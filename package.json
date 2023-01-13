@@ -287,7 +287,7 @@
     "stack-trace": "^0.0.10",
     "striptags": "^3.1.1",
     "superagent": "^5.0.8",
-    "terminal-kit": "^1.28.1",
+    "terminal-kit": "^2.1.8",
     "tough-cookie-filestore2": "^1.0.0",
     "tumblr.js": "^2.0.2",
     "twitter": "^1.7.1",
